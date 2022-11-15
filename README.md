@@ -1,2 +1,2 @@
 # PV2022
- dinamita
+ dynamite

@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="PV2022" options="-endorseddirs C:\Users\JAIME\Documents\GitHub\PV2022\target/endorsed" />
+      <module name="PV2022" options="-endorseddirs C:\Users\jairo\Pictures\BASE\PV2022\target/endorsed" />
     </option>
   </component>
 </project>
