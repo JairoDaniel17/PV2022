@@ -4,8 +4,64 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Navbar Template · Bootstrap v5.2 -->
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars-offcanvas/">
+        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="assets/dist/css/navbar.css" rel="stylesheet">
     </head>
     <body>
-        <div><a href="Servlet">A l  s e r v l e t</a></div>
+        <!--barra de navegacion-->
+        <div>
+            <nav class="navbar navbar-expand-xl navbar-dark bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><b>LP<sup>2</sup> Restamita</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container my-5">
+            <div class="bg-light p-5 rounded">
+                <div class="col-sm-8 py-5 mx-auto">
+                    <h1 class="display-5 fw-normal">Ejercicio 2</h1>
+                    <p class="fs-5">
+                        En una tienda ofrece el 20% de descuento siempre que el monto del consumo
+                        supere los 30 soles, de lo contrario solamente ofrece el 10% de descuento.
+                        Sabiendo que por impuesto se debe cancelar el 18% del valor de venta que
+                        resulte de restar el descuento del monto consumido, se desea mostrar el
+                        importe consumido, el descuento, el valor de venta, el impuesto y el valor de
+                        la factura que se debe pagar por alguna compra.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary" href="Servlet" role="button">Servlet</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
