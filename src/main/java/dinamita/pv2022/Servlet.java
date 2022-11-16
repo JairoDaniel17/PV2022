@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Servlet", urlPatterns =
 {
-    "/Servlet","/Inicio","Inicio"
+    "/Servlet", "/Inicio", "/login"
 })
 public class Servlet extends HttpServlet {
 
@@ -33,12 +33,17 @@ public class Servlet extends HttpServlet {
         try ( PrintWriter out = response.getWriter())
         {
             String path = request.getServletPath();
-            if (path.equals("/Inicio"))
+            if (path.equals("/login"))
             {
-                //double numeros = Double.parseDouble(request.getParameter("numero"));
-                //String examen = "El número que se envio al servidor fue: " + numeros;
-                //request.setAttribute("datoDelServlet", examen);
-                request.getRequestDispatcher("WEB-INF/inicio.jsp").forward(request, response);
+                String correo = request.getParameter("usuario");
+                String contra = request.getParameter("contra");
+                if ("correo".equals(correo) && "contra".equals(contra))
+                {
+                    request.getRequestDispatcher("WEB-INF/inicio.jsp").forward(request, response);
+                } else
+                {
+                    request.getRequestDispatcher("index.html").forward(request, response);
+                }
             }
         }
     }
