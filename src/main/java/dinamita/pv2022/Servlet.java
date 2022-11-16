@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Servlet", urlPatterns =
 {
-    "/Servlet"
+    "/Servlet", "/login"
 })
 public class Servlet extends HttpServlet {
 
@@ -32,16 +32,19 @@ public class Servlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter())
         {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            String path = request.getServletPath();
+            if (path.equals("/login"))
+            {
+                String correo = request.getParameter("usuario");
+                String contra = request.getParameter("contra");
+                if ("correo".equals(correo) && "contra".equals(contra))
+                {
+                    request.getRequestDispatcher("WEB-INF/inicio.jsp").forward(request, response);
+                } else
+                {
+                    request.getRequestDispatcher("index.html").forward(request, response);
+                }
+            }
         }
     }
 
